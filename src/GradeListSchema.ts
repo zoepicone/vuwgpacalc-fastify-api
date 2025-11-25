@@ -23,9 +23,9 @@ export const GradeList =
         courses: Type.Array(Type.Object({
           name: Type.String(),
           grade: ValidGradesBoxed,
-          points: Type.Number()
+          points: Type.Number({minimum: 0})
         }))
-      }))
+      }), {maxItems: 3})
     }))
   })
 
